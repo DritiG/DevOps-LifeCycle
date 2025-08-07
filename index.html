@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamStitch - A Cozy Book Nook</title>
+    <!-- Use Tailwind CSS for a responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for a classic serif look */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        
+        /* Define a custom beige color for the theme */
+        :root {
+            --beige: #f5f5dc;
+        }
+
+        .bg-beige {
+            background-color: var(--beige);
+        }
+
+        .text-beige {
+            color: var(--beige);
+        }
+        
+        /* Using Playfair Display as a beautiful serif font similar to Baskerville/Times New Roman */
+        .font-baskerville-like {
+            font-family: 'Playfair Display', 'Times New Roman', serif;
+        }
+        
+        /* Fallback for body text if Playfair Display is not available */
+        body {
+            font-family: 'Times New Roman', serif;
+        }
+
+        /* Hero section with a dark overlay to make text pop */
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x800/1a1a1a/4a4a4a?text=Reading+is+a+Dream');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-beige text-black">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo/Site Title -->
+            <a href="#" class="flex items-center space-x-2">
+                <!-- Book-themed SVG logo -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M4 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v10a2 2 0 01-2 2H4zm1-4v1a1 1 0 002 0v-1h4v1a1 1 0 002 0v-1h2v-4H5v4zm1-5h8a2 2 0 01-2-2V8h-4v1a1 1 0 00-2 0V8a2 2 0 01-2 2h2z" />
+                </svg>
+                <span class="text-4xl font-baskerville-like font-bold text-black">DreamStitch</span>
+            </a>
+            <!-- Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8 font-baskerville-like">
+                <a href="#" class="text-black hover:text-red-600 transition duration-300 font-semibold">Home</a>
+                <a href="#" class="text-black hover:text-red-600 transition duration-300 font-semibold">Reviews</a>
+                <a href="#" class="text-black hover:text-red-600 transition duration-300 font-semibold">About</a>
+                <a href="#" class="text-black hover:text-red-600 transition duration-300 font-semibold">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section with a cute girly introduction -->
+        <section class="hero-bg text-white py-24 px-6 relative">
+            <div class="container mx-auto text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-baskerville-like font-bold mb-4 leading-tight">
+                    Welcome to our cozy book nook, sweetie!
+                </h1>
+                <p class="text-lg md:text-xl font-baskerville-like max-w-3xl mx-auto mb-10 text-white">
+                    Grab a cup of tea and a comfy blanket, because we're about to dive into some of our favorite reads. Happy reading!
+                </p>
+                <a href="#" class="inline-block bg-red-600 text-white font-baskerville-like font-bold py-3 px-8 rounded-full shadow-lg hover:bg-red-700 transition duration-300 transform hover:scale-105">
+                    Start Reading
+                </a>
+            </div>
+        </section>
+
+        <!-- Recent Reviews Section -->
+        <section class="py-20 px-6">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-baskerville-like font-bold text-center mb-12 text-black">Recent Reviews</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Book Review Card 1 -->
+                    <div class="bg-white rounded-xl p-6 shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl border-2 border-red-200">
+                        <!-- Placeholder image for the book cover -->
+                        <img src="http://googleusercontent.com/file_content/1" alt="The Secret Garden book cover" class="w-full h-80 object-cover rounded-lg mb-4 shadow-xl">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-baskerville-like font-semibold text-black">The Secret Garden</h3>
+                            <p class="text-red-600 font-baskerville-like font-medium text-sm">by Frances Hodgson Burnett</p>
+                            <p class="mt-4 text-black text-sm">
+                                "A beautiful, enchanting tale of a spoiled young girl who discovers a hidden garden on her uncle's estate. It's a journey of healing, friendship, and the magic of nature."
+                            </p>
+                            <a href="#" class="mt-6 inline-block bg-black text-white font-baskerville-like font-bold py-2 px-6 rounded-full hover:bg-red-600 transition duration-300">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Book Review Card 2 -->
+                    <div class="bg-white rounded-xl p-6 shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-3xl border-2 border-red-200">
+                        <img src="http://googleusercontent.com/file_content/2" alt="Pride and Prejudice book cover" class="w-full h-80 object-cover rounded-lg mb-4 shadow-xl">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-baskerville-like font-semibold text-black">Pride and Prejudice</h3>
+                            <p class="text-red-600 font-baskerville-like font-medium text-sm">by Jane Austen</p>
+                            <p class="mt-4 text-black text-sm">
+                                "A timeless classic that every hopeless romantic should read. Elizabeth Bennet and Mr. Darcy's witty banter and slow-burn romance will capture your heart."
+                            </p>
+                            <a href="#" class="mt-6 inline-block bg-black text-white font-baskerville-like font-bold py-2 px-6 rounded-full hover:bg-red-600 transition duration-300">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10 px-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 DreamStitch. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:text-red-600 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.772 1.637 4.909 4.909.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.148 3.252-1.637 4.772-4.909 4.909-1.265.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.772-1.637-4.909-4.909-.058-1.265-.07-1.645-.07-4.85s.012-3.584.07-4.85c.148-3.252 1.637-4.772 4.909-4.909 1.265-.058 1.645-.07 4.85-.07zm0-2.163c-3.727 0-4.184.016-5.632.083-3.79 0-6.07 2.28-6.142 6.07-.067 1.448-.083 1.905-.083 5.632 0 3.727.016 4.184.083 5.632.072 3.79 2.352 6.07 6.142 6.142 1.448.067 1.905.083 5.632.083 3.727 0 4.184-.016 5.632-.083 3.79-.072 6.07-2.352 6.142-6.142.067-1.448.083-1.905.083-5.632 0-3.727-.016-4.184-.083-5.632-.072-3.79-2.352-6.07-6.142-6.142-1.448-.067-1.905-.083-5.632-.083z"/>
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-red-600 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.584 0-6.495 2.91-6.495 6.495 0 .509.058 1.006.173 1.484-5.39-.27-10.194-2.855-13.407-6.78C.248 5.408-.008 6.55.004 7.625c0 2.258 1.15 4.244 2.909 5.41-.853-.028-1.666-.263-2.378-.655v.08c0 3.154 2.235 5.787 5.197 6.39-.553.15-1.139.23-1.747.23-.435 0-.85-.04-1.25-.118.825 2.572 3.208 4.45 6.046 4.498-2.22 1.745-5.029 2.784-8.09 2.784-.525 0-1.04-.03-1.55-.098 2.872 1.849 6.297 2.92 9.998 2.92 12.008 0 18.57-9.916 18.57-18.57 0-.28-.007-.56-.02-.84.962-.695 1.797-1.562 2.457-2.55z"/>
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-red-600 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22.28 12c0-5.61-4.57-10.16-10.16-10.16S2 6.39 2 12c0 4.9 3.52 9 8.2 9.95v-7.07h-2.48V12h2.48v-1.8c0-2.46 1.49-3.8 3.69-3.8 1.05 0 2.15.19 2.15.19v2.37h-1.21c-1.2 0-1.58.74-1.58 1.5V12h2.64l-.42 2.88h-2.22v7.07c4.68-.95 8.2-5.05 8.2-9.95z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
