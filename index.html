@@ -3,45 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Findflix - Your Entertainment Guide</title>
-    <!-- Tailwind CSS CDN for a clean, aesthetic design -->
+    <title>DevOps Lifecycle Flow Diagram</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Link to the external stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Link to the external JavaScript file -->
-    <script src="script.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body class="text-white">
-    <div class="min-h-screen flex flex-col items-center p-4 md:p-8">
-        <!-- Header Section -->
-        <header class="w-full max-w-4xl text-center mb-8 md:mb-12">
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#e50914] leading-tight tracking-tighter">Findflix</h1>
-            <p class="text-lg md:text-xl text-gray-400 mt-2">Your ultimate guide to movies and TV shows.</p>
-        </header>
+<body class="bg-gray-900 text-gray-100 min-h-screen p-8 flex items-center justify-center">
+    <div class="max-w-xl w-full">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">
+            The DevOps Lifecycle
+        </h1>
 
-        <!-- Search Bar Section -->
-        <main class="w-full max-w-3xl">
-            <div class="flex flex-col md:flex-row gap-4">
-                <input type="text" id="searchInput" placeholder="Search for titles..."
-                       class="flex-grow p-3 md:p-4 rounded-full bg-[#333333] border border-[#444444] text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#e50914] transition-all duration-300 font-semibold">
-                <button id="searchButton"
-                        class="p-3 md:p-4 bg-[#e50914] hover:bg-[#b81d24] text-white rounded-full font-bold shadow-lg transition-all duration-300 transform active:scale-95">
-                    Search
-                </button>
-            </div>
-
-            <!-- Results Container -->
-            <div id="resultsContainer"
-                 class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 scroll-container overflow-y-auto max-h-[70vh]">
-                <!-- Results will be dynamically inserted here -->
-                <div id="welcomeMessage" class="col-span-full flex flex-col items-center justify-center text-center text-gray-400 p-8">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                    <p class="text-lg">Start by searching for a movie or TV show to find out more about it.</p>
+        <div class="flex flex-col items-center gap-4">
+            <!-- Stage 1: Plan -->
+            <div class="w-full bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex items-center gap-4">
+                <span class="text-3xl flex-shrink-0" role="img" aria-label="Plan">📝</span>
+                <div>
+                    <h2 class="font-bold text-xl text-teal-400">Plan</h2>
+                    <p class="text-sm text-gray-400">Define and prioritize project goals and tasks.</p>
                 </div>
             </div>
-        </main>
+
+            <!-- Flow Arrow -->
+            <div class="h-8 w-1 bg-gradient-to-b from-teal-500 to-blue-500"></div>
+
+            <!-- Stage 2: Develop -->
+            <div class="w-full bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex items-center gap-4">
+                <span class="text-3xl flex-shrink-0" role="img" aria-label="Develop">👨‍💻</span>
+                <div>
+                    <h2 class="font-bold text-xl text-blue-400">Develop</h2>
+                    <p class="text-sm text-gray-400">Write and commit code to a shared repository.</p>
+                </div>
+            </div>
+
+            <!-- Flow Arrow -->
+            <div class="h-8 w-1 bg-gradient-to-b from-teal-500 to-blue-500"></div>
+
+            <!-- Stage 3: Build -->
+            <div class="w-full bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex items-center gap-4">
+                <span class="text-3xl flex-shrink-0" role="img" aria-label="Build">🏗️</span>
+                <div>
+                    <h2 class="font-bold text-xl text-teal-400">Build</h2>
+                    <p class="text-sm text-gray-400">Compile source code, create artifacts, and run unit tests.</p>
+                </div>
+            </div>
+
+            <!-- Flow Arrow -->
+            <div class="h-8 w-1 bg-gradient-to-b from-teal-500 to-blue-500"></div>
+
+            <!-- Stage 4: Test -->
+            <div class="w-full bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex items-center gap-4">
+                <span class="text-3xl flex-shrink-0" role="img" aria-label="Test">🔍</span>
+                <div>
+                    <h2 class="font-bold text-xl text-blue-400">Test</h2>
+                    <p class="text-sm text-gray-400">Conduct automated and manual tests to ensure quality.</p>
+                </div>
+            </div>
+
+            <!-- Flow Arrow -->
+            <div class="h-8 w-1 bg-gradient-to-b from-teal-500 to-blue-500"></div>
+
+            <!-- Stage 5: Release -->
+            <div class="w-full bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex items-center gap-4">
+                <span class="text-3xl flex-shrink-0" role="img" aria-label="Release">🚀</span>
+                <div>
+                    <h2 class="font-bold text-xl text-teal-400">Release</h2>
+                    <p class="text-sm text-gray-400">Approve and prepare the application for deployment.</p>
+                </div>
+            </div>
+
+            <!-- Flow Arrow -->
+            <div class="h-8 w-1 bg-gradient-to-b from-teal-500 to-blue-500"></div>
+
+            <!-- Stage 6: Deploy -->
+            <div class="w-full bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex items-center gap-4">
+                <span class="text-3xl flex-shrink-0" role="img" aria-label="Deploy">☁️</span>
+                <div>
+                    <h2 class="font-bold text-xl text-blue-400">Deploy</h2>
+                    <p class="text-sm text-gray-400">Install and configure the application in production.</p>
+                </div>
+            </div>
+
+            <!-- Flow Arrow -->
+            <div class="h-8 w-1 bg-gradient-to-b from-teal-500 to-blue-500"></div>
+
+            <!-- Stage 7: Operate -->
+            <div class="w-full bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex items-center gap-4">
+                <span class="text-3xl flex-shrink-0" role="img" aria-label="Operate">🛠️</span>
+                <div>
+                    <h2 class="font-bold text-xl text-teal-400">Operate</h2>
+                    <p class="text-sm text-gray-400">Manage and maintain the application in the live environment.</p>
+                </div>
+            </div>
+
+            <!-- Flow Arrow -->
+            <div class="h-8 w-1 bg-gradient-to-b from-teal-500 to-blue-500"></div>
+
+            <!-- Stage 8: Monitor -->
+            <div class="w-full bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex items-center gap-4">
+                <span class="text-3xl flex-shrink-0" role="img" aria-label="Monitor">📊</span>
+                <div>
+                    <h2 class="font-bold text-xl text-blue-400">Monitor</h2>
+                    <p class="text-sm text-gray-400">Track performance, gather feedback, and identify issues.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
